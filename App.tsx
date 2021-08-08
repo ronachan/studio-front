@@ -1,6 +1,6 @@
 import React, {useState } from 'react';
 import './App.css';
-import Button from "./components/CustomButtonComponent";
+import Button from "./CustomButtonComponent";
 
 const App = () => {
   const [title, setTitle] = useState("");
