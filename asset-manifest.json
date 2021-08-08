@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/studio-front/static/css/main.036f360c.chunk.css",
+    "main.js": "/studio-front/static/js/main.a66a2cf3.chunk.js",
+    "main.js.map": "/studio-front/static/js/main.a66a2cf3.chunk.js.map",
+    "runtime-main.js": "/studio-front/static/js/runtime-main.795b748b.js",
+    "runtime-main.js.map": "/studio-front/static/js/runtime-main.795b748b.js.map",
+    "static/js/2.13c68ebb.chunk.js": "/studio-front/static/js/2.13c68ebb.chunk.js",
+    "static/js/2.13c68ebb.chunk.js.map": "/studio-front/static/js/2.13c68ebb.chunk.js.map",
+    "static/js/3.ac884898.chunk.js": "/studio-front/static/js/3.ac884898.chunk.js",
+    "static/js/3.ac884898.chunk.js.map": "/studio-front/static/js/3.ac884898.chunk.js.map",
+    "index.html": "/studio-front/index.html",
+    "static/css/main.036f360c.chunk.css.map": "/studio-front/static/css/main.036f360c.chunk.css.map",
+    "static/js/2.13c68ebb.chunk.js.LICENSE.txt": "/studio-front/static/js/2.13c68ebb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.795b748b.js",
+    "static/js/2.13c68ebb.chunk.js",
+    "static/css/main.036f360c.chunk.css",
+    "static/js/main.a66a2cf3.chunk.js"
+  ]
+}
