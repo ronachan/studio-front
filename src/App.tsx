@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap";
-// import $ from "jquery";
-// import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
 const url = "https://lit-wave-20923.herokuapp.com/";
 
 const getTitleData = async () => {
@@ -83,11 +81,10 @@ const App = () => {
       <div className="homepage-bgimage">
         <div>
           {/* <div className="centered-top"> */}
-          <h1 className="my-5">Stuido Ghibli Films Random Generator</h1>
-          <br />
+          <h1 className="py-5">Stuido Ghibli Films Random Generator</h1>
           <div className="bg-frosty container rounded transition-all">
             <h3>{current.title}</h3>
-            <p>
+            <p className='my-1'>
               {!(current.title.length === 0)
                 ? `was released in ${current.release} and scored a ${current.rating}`
                 : "Click the button to get a random title!"}

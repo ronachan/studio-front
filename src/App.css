@@ -31,13 +31,12 @@ body, html {
 }
 .transition-all {
   height: fit-content;
-  overflow: hidden;
   transition: all 1s;
 }
 .all-data-table, .bg-frosty {
   /* -webkit-backdrop-filter: blur(9px); */
   backdrop-filter: blur(9px);
-  background-color: rgba(255, 255, 255, 0.116); 
+  background-color: rgba(255, 255, 255, 0.26); 
 }
 
 .all-data-table thead{
