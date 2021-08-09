@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-// import Button from "./components/CustomButtonComponent";
+import "bootstrap";
+// import $ from "jquery";
+// import { BootstrapTable, TableHeaderColumn } from "react-bootstrap-table";
 const url = "https://lit-wave-20923.herokuapp.com/";
 
 const getTitleData = async () => {
@@ -8,10 +10,51 @@ const getTitleData = async () => {
   const json = await response.json();
   return json;
 };
+
+const MyTitleList = (props: {
+  moreData: string;
+  titleData: {
+    title: string;
+    description: string;
+    release_date: string;
+    rt_score: string;
+  }[];
+}) => {
+  console.log(props);
+  return (
+    <table className="table table-bordered table-hover all-data-table px-3">
+      <thead>
+        <tr>
+          <th scope="col">Film Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Year Released</th>
+          <th scope="col">Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        {props.titleData.map(
+          (title: {
+            title: string;
+            description: string;
+            release_date: string;
+            rt_score: string;
+          }) => {
+            return (
+              <tr>
+                <td>{title.title}</td>
+                <td>{title.description}</td>
+                <td>{title.release_date}</td>
+                <td>{title.rt_score}</td>
+              </tr>
+            );
+          }
+        )}
+      </tbody>
+    </table>
+  );
+};
+
 const App = () => {
-  const [title, setTitle] = useState("");
-  const [rating, setRating] = useState("");
-  const [release, setRelease] = useState("");
   const [titleData, setTitleData] = useState([]);
   const [current, setCurrent] = useState({
     title: "",
@@ -38,24 +81,28 @@ const App = () => {
   return (
     <div className="application">
       <div className="homepage-bgimage">
-        <div className="centered">
+        <div>
+          {/* <div className="centered-top"> */}
           <h1>Stuido Ghibli Films Random Generator</h1>
-          <h3>{current.title}</h3>
-          <p>
-            {!(current.title.length === 0) ? `was released in ${current.release} and scored a ${current.rating}`: "Click the button to get a random title!"}
-          </p>
-          {/* {titleData.length > 0 ? titleData.map((title)=><li><pre>{JSON.stringify(title, null, 2)}</pre></li>) :""} */}
-          <br/>
-          {/* <p>Title: {title}</p>
-          <p>Rating: {rating}</p>
-          <p>Year Released: {release}</p> */}
+          <br />
+          <div className="bg-frosty container">
+            <h3>{current.title}</h3>
+            <p>
+              {!(current.title.length === 0)
+                ? `was released in ${current.release} and scored a ${current.rating}`
+                : "Click the button to get a random title!"}
+            </p>
+          </div>
           <button
             type="button"
-            className="btn btn-primary"
+            className="btn btn-primary my-5"
             onClick={handleClick}
           >
-            Primary
+            Random Film
           </button>
+        </div>
+        <div className="container">
+          <MyTitleList titleData={titleData} moreData={"i am more data"} />
         </div>
       </div>
     </div>

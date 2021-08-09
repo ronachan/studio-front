@@ -6,7 +6,9 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+body, html {
+  height: 100%;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -27,26 +29,44 @@
 .App-link {
   color: #61dafb;
 }
+.all-data-table, .bg-frosty {
+  /* -webkit-backdrop-filter: blur(9px); */
+  backdrop-filter: blur(9px);
+  background-color: rgba(255, 255, 255, 0.116); 
+}
 
+.all-data-table thead{
+  background-color: rgba(255, 100, 151, 0.116);
+}
 .application {
+  height: fit-content;
   position: relative;
   text-align: center;
   color: white;
 }
 
-.centered {
+.centered-top {
   position: absolute;
-  top: 50%;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered-bottom {
+  position: absolute;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .homepage-bgimage {
   background: url("https://studioghiblimovies.com/wp-content/uploads/2020/03/73-737065_living-waters-ag-wave-vector-clipart-1024x546.png");
-  height: 100vh;
+  height: fit-content;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  position: static;
 }
 
 @keyframes App-logo-spin {
