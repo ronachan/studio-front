@@ -85,7 +85,7 @@ const App = () => {
           {/* <div className="centered-top"> */}
           <h1>Stuido Ghibli Films Random Generator</h1>
           <br />
-          <div className="bg-frosty container">
+          <div className="bg-frosty container rounded transition-all">
             <h3>{current.title}</h3>
             <p>
               {!(current.title.length === 0)

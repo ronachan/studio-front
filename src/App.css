@@ -29,6 +29,10 @@ body, html {
 .App-link {
   color: #61dafb;
 }
+.transition-all {
+  height: fit-content;
+  transition: all 1s ease;
+}
 .all-data-table, .bg-frosty {
   /* -webkit-backdrop-filter: blur(9px); */
   backdrop-filter: blur(9px);
