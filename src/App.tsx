@@ -83,7 +83,7 @@ const App = () => {
       <div className="homepage-bgimage">
         <div>
           {/* <div className="centered-top"> */}
-          <h1>Stuido Ghibli Films Random Generator</h1>
+          <h1 className="my-5">Stuido Ghibli Films Random Generator</h1>
           <br />
           <div className="bg-frosty container rounded transition-all">
             <h3>{current.title}</h3>

@@ -31,7 +31,8 @@ body, html {
 }
 .transition-all {
   height: fit-content;
-  transition: all 1s ease;
+  overflow: hidden;
+  transition: all 1s;
 }
 .all-data-table, .bg-frosty {
   /* -webkit-backdrop-filter: blur(9px); */
