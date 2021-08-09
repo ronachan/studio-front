@@ -20,7 +20,7 @@ const MyTitleList = (props: {
 }) => {
   console.log(props);
   return (
-    <table className="table table-bordered table-hover all-data-table px-3">
+    <table className="table rounded table-hover all-data-table px-3">
       <thead>
         <tr>
           <th scope="col">Film Title</th>
